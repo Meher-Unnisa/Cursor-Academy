@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cursor Academy</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family:'Rajdhani',sans-serif;
+  background:#020810;
+  color:white;
+}
+
+/* HEADER */
+header{
+  text-align:center;
+  padding:20px;
+}
+
+header img{
+  width:120px;
+}
+
+header h1{
+  font-family:'Orbitron';
+  color:#00f5ff;
+  margin:10px 0;
+}
+
+/* FORM */
+.form{
+  text-align:center;
+  padding:30px;
+  background:#07111f;
+}
+
+input,select,textarea{
+  width:90%;
+  max-width:400px;
+  margin:10px;
+  padding:12px;
+  border:none;
+  border-radius:5px;
+}
+
+button{
+  padding:12px 25px;
+  background:#00f5ff;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+/* SECTIONS */
+.section{
+  padding:40px 20px;
+  text-align:center;
+}
+
+.title{
+  font-family:'Orbitron';
+  color:#00f5ff;
+}
+
+/* BOX */
+.box{
+  background:#07111f;
+  padding:20px;
+  margin:10px;
+  border-radius:10px;
+  display:inline-block;
+  width:250px;
+  border:1px solid #00f5ff33;
+}
+
+/* HIGHLIGHT */
+.highlight{
+  color:#00ff9d;
+  margin-top:10px;
+}
+
+/* BUTTON */
+.btn{
+  display:inline-block;
+  margin:10px;
+  padding:10px 20px;
+  background:#00ff9d;
+  color:black;
+  text-decoration:none;
+  border-radius:5px;
+}
+
+/* FOOTER */
+footer{
+  background:#07111f;
+  text-align:center;
+  padding:20px;
+  font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <img src="LOGO.jpeg">
+  <h1>Cursor Academy</h1>
+  <p>Code Today, Create Tomorrow</p>
+</header>
+
+<!-- FORM FIRST -->
+<section class="form">
+  <h2>Book Your Project</h2>
+
+  <form onsubmit="sendWhatsApp(); return false;">
+    <input type="text" id="name" placeholder="Your Name" required><br>
+    <input type="tel" id="phone" placeholder="Your Phone" required><br>
+
+    <select id="course">
+      <option>C Programming</option>
+      <option>Java</option>
+      <option>Python</option>
+      <option>JavaScript</option>
+      <option>Data Science</option>
+      <option>Web Development</option>
+      <option>Full Stack</option>
+    </select><br>
+
+    <textarea id="msg" placeholder="Project Requirement"></textarea><br>
+
+    <button type="submit">Book Now</button>
+  </form>
+</section>
+
+<!-- HERO -->
+<section class="section">
+  <h2 class="title">STEP INTO THE WORLD OF TECHNOLOGY</h2>
+
+  <p class="highlight">
+    ✔ Projects + Explanation + Viva  
+    ✔ Diploma (CSE, IT, AIML, Data Science)
+  </p>
+
+  <a href="https://wa.me/918096130459?text=Hello I want details" class="btn">WhatsApp</a>
+</section>
+
+<!-- COURSES -->
+<section class="section">
+  <h2 class="title">Courses We Offer</h2>
+
+  <div class="box">C Programming</div>
+  <div class="box">Java</div>
+  <div class="box">Python</div>
+  <div class="box">JavaScript</div>
+  <div class="box">Full Stack</div>
+  <div class="box">Web Development</div>
+  <div class="box">MERN Stack</div>
+</section>
+
+<!-- SERVICES -->
+<section class="section">
+  <h2 class="title">Our Services</h2>
+
+  <div class="box">Final Year & Mini Projects</div>
+  <div class="box">Real-Time Training</div>
+  <div class="box">Documentation + PPT</div>
+  <div class="box">Viva Preparation</div>
+  <div class="box">Step-by-Step Guidance</div>
+</section>
+
+<!-- WHY US -->
+<section class="section">
+  <h2 class="title">Why Choose Us</h2>
+
+  <div class="box">Expert Mentorship</div>
+  <div class="box">Practical Learning</div>
+  <div class="box">Industry Oriented</div>
+  <div class="box">Affordable Fees</div>
+  <div class="box">On-Time Support</div>
+</section>
+
+<!-- CONTACT -->
+<section class="section">
+  <h2 class="title">Contact Us</h2>
+
+  <h1>8096130459</h1>
+
+  <a href="tel:8096130459" class="btn">Call Now</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>📧 mzill0319@gmail.com</p>
+  <p>📱 WhatsApp: 8096130459</p>
+  <p>🌐 https://your-website-link.com</p>
+  <p>© 2026 Cursor Academy</p>
+</footer>
+
+<script>
+function sendWhatsApp(){
+  var name=document.getElementById("name").value;
+  var phone=document.getElementById("phone").value;
+  var course=document.getElementById("course").value;
+  var msg=document.getElementById("msg").value;
+  var url="https://wa.me/918096130459?text="
+  +"Name: "+name+"%0a"
+  +"Phone: "+phone+"%0a"
+  +"Course: "+course+"%0a"
+  +"Requirement: "+msg;
+  window.open(url,'_blank');
+}
+</script>
+
+</body>
+</html>
